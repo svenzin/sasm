@@ -4,7 +4,7 @@
 
 namespace sasm {
 
-const character character::end_of_file{-1, -1, -1};
+static const character end_of_file{-1, -1, -1};
 
 auto ctuple(const character& c) {
     return std::tie(c.offset, c.width, c.value);
@@ -26,7 +26,7 @@ character reader::get() {
         ++m_offset;
         return result;
     }
-    return character::end_of_file;
+    return end_of_file;
 }
 
 }

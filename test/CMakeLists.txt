@@ -1,4 +1,4 @@
-add_executable(test_runner test_reader.cpp test_lexer.cpp test_parser.cpp)
+add_executable(test_runner test_reader.cpp test_lexer.cpp test_expression.cpp test_parser.cpp)
 
 target_compile_features(test_runner PRIVATE cxx_std_20)
 

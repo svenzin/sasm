@@ -28,6 +28,9 @@ struct lexer_token {
     template <token_type kind> bool is() const {
         return (type == kind);
     }
+    template <token_type kind_1, token_type kind_2> bool is() const {
+        return (type == kind_1) || (type == kind_2);
+    }
     template <token_type kind> bool is(const std::string& txt) const {
         return is<kind>() && (content == txt);
     }

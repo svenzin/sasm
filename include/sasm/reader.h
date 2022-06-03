@@ -10,8 +10,6 @@ struct character {
     char value;
     
     bool eof() const;
-    
-    static const character end_of_file;
 };
 
 class reader {
